@@ -1,0 +1,18 @@
+I had to do some dirty coding to make the page look right after sorting a column.
+Initially, he StaticText filled their cells up to the padding as designed.
+Sorting the columns merely changed the data inside the cells with a SetLabel() call.
+
+Oddity #1:
+The static text boxes would shrink to fit contents instead of expanding- yucko.
+calling Refresh() didn't work, but Resize((W,H+1)) expanded the StaticText cells automatically.
+Oddity #2:
+I did not notice an actuall chnge in size even after many sortings
+
+There might be a better way, I'd like to know.
+
+Problem. 
+StaticText doesn't have text selection which would be usefull to copy a value.
+I tried using TextCtrl, but it didn't Flex-size properly.  
+It seems that column sizing might have to be done by hand.
+
+
